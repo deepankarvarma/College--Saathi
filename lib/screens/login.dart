@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -19,45 +21,67 @@ class LoginPage extends StatelessWidget {
             image: AssetImage('assets/logo.jpeg'),
           ),
           const SizedBox(
-            height: 30.0,
+            height: 20.0,
           ),
           const Text(
-            'Login in',
+            'Campus Saathi',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 25, fontFamily: 'Brand-Bold'),
+            style: TextStyle(fontSize: 30, fontFamily: 'Brand-Bold'),
           ),
-          Row(
-            children: <Widget>[
-               FloatingActionButton(
-               onPressed: () {},
-               
-                shape: RoundedRectangleBorder(
-                  borderRadius:  BorderRadius.circular(5.0),
-                ),
-                child: const Text(
-                  'Admin',
-                  style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 15.0),
-                ),
-               ),
-            
-            ],
+          SizedBox(height: 1.0,),
+          Text(
+            'Your Campus Friend',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20,fontFamily: 'Brand-Regular'),
           ),
-          const Padding(
-            padding: EdgeInsets.all(20.0),
+          SizedBox(height: 30.0,),
+           Padding(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                   labelText: 'Phone Number',
                   labelStyle: TextStyle(
                     fontFamily: 'Brand-Regular',
-                    fontSize: 20.0,
+                    fontSize: 18.0,
                   ),
                   hintStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 20.0,
+                    fontSize: 10.0,
                   )),
             ),
-          )
+          ),
+            Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
+              keyboardType: TextInputType.visiblePassword,
+              decoration: InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    fontFamily: 'Brand-Regular',
+                    fontSize: 18.0,
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10.0,
+                  )),
+            ),
+          ),
+          SizedBox(height: 30.0,),
+          SizedBox(
+                height: 40.0,
+                width: 75.0,
+                 child: FloatingActionButton(
+                 onPressed: () {},
+                    shape: RoundedRectangleBorder(
+                    borderRadius:  BorderRadius.circular(5.0),
+                  ),
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 15.0),
+                  ),
+                 ),
+               ),
         ],
       ),
     );
