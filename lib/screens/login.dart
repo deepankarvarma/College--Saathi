@@ -11,6 +11,7 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
+          
           const SizedBox(
             height: 130.0,
           ),
@@ -32,7 +33,7 @@ class LoginPage extends StatelessWidget {
           Text(
             'Your Campus Friend',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20,fontFamily: 'Brand-Regular'),
+            style: TextStyle(fontSize: 20,fontFamily: 'Brand-Regular',color: Colors.green),
           ),
           SizedBox(height: 30.0,),
            Padding(
@@ -52,7 +53,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
             Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
               keyboardType: TextInputType.visiblePassword,
               decoration: InputDecoration(
@@ -67,21 +68,62 @@ class LoginPage extends StatelessWidget {
                   )),
             ),
           ),
-          SizedBox(height: 30.0,),
-          SizedBox(
-                height: 40.0,
-                width: 75.0,
-                 child: FloatingActionButton(
-                 onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                    borderRadius:  BorderRadius.circular(5.0),
-                  ),
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 15.0),
-                  ),
+          SizedBox(height: 10.0,),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Forgot Password ?',
+                
+                textAlign: TextAlign.left,
+                
+                style: TextStyle(fontSize: 13.0,fontFamily: 'Brand-Bold',color: Colors.green),
+              ),
+            ),
+          ),
+          SizedBox(height: 40.0,),
+          Center(
+            child: SizedBox(
+                  height: 40.0,
+                  width: 350.0,
+                
+                   child: FloatingActionButton(
+                    
+                   onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                      borderRadius:  BorderRadius.circular(5.0),
+                    ),
+                    backgroundColor: Colors.green,
+                    child: const Text(
+                      
+                      'Login',
+                      style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0),
+                    ),
+                   ),
                  ),
-               ),
+          ),
+          SizedBox(height: 25.0,),
+          Center(
+            child: SizedBox(
+                  height: 40.0,
+                  width: 350.0,
+                
+                   child: FloatingActionButton(
+                    
+                   onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                      borderRadius:  BorderRadius.circular(5.0),
+                    ),
+                    backgroundColor: Colors.green,
+                    child: const Text(
+                      
+                      'Register',
+                      style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0),
+                    ),
+                   ),
+                 ),
+          ),
         ],
       ),
     );
