@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:college_saathi/screens/imp_contact.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -111,7 +112,7 @@ class LoginPage extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Imp_Contact()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
