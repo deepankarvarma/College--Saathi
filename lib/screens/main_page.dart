@@ -1,4 +1,5 @@
 import 'package:college_saathi/screens/imp_contact.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:college_saathi/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -159,88 +160,58 @@ class MainPage extends StatelessWidget {
             ],
           ),
           
-
-      // ListView(
-      //   children: [
-      //     CarouselSlider(
-      //         items: [
-                  
-      //           //1st Image of Slider
-      //           Container(
-      //             margin: const EdgeInsets.all(6.0),
-      //             decoration: BoxDecoration(
-      //               borderRadius: BorderRadius.circular(8.0),
-      //               image: const DecorationImage(
-      //                 image: AssetImage('man.jpg'),
-      //                 fit: BoxFit.cover,
-      //               ),
-      //             ),
-      //           ),
-                  
-      //           //2nd Image of Slider
-      //           Container(
-      //             margin: const EdgeInsets.all(6.0),
-      //             decoration: BoxDecoration(
-      //               borderRadius: BorderRadius.circular(8.0),
-      //               image: const DecorationImage(
-      //                 image: AssetImage('man.jpg'),
-      //                 fit: BoxFit.cover,
-      //               ),
-      //             ),
-      //           ),
-                  
-      //           //3rd Image of Slider
-      //           Container(
-      //             margin: const EdgeInsets.all(6.0),
-      //             decoration: BoxDecoration(
-      //               borderRadius: BorderRadius.circular(8.0),
-      //               image: const DecorationImage(
-      //                 image: AssetImage('man.jpg'),
-      //                 fit: BoxFit.cover,
-      //               ),
-      //             ),
-      //           ),
-                  
-      //           //4th Image of Slider
-      //           Container(
-      //             margin: const EdgeInsets.all(6.0),
-      //             decoration: BoxDecoration(
-      //               borderRadius: BorderRadius.circular(8.0),
-      //               image: const DecorationImage(
-      //                 image: AssetImage('man.jpg'),
-      //                 fit: BoxFit.cover,
-      //               ),
-      //             ),
-      //           ),
-                  
-      //           //5th Image of Slider
-      //           Container(
-      //             margin: const EdgeInsets.all(6.0),
-      //             decoration: BoxDecoration(
-      //               borderRadius: BorderRadius.circular(8.0),
-      //               image: const DecorationImage(
-      //                 image: AssetImage('man.jpg'),
-      //                 fit: BoxFit.cover,
-      //               ),
-      //             ),
-      //           ),
-  
-      //     ],
-              
-      //       //Slider Container properties
-      //         options: CarouselOptions(
-      //           height: 180.0,
-      //           enlargeCenterPage: true,
-      //           autoPlay: true,
-      //           aspectRatio: 16 / 9,
-      //           autoPlayCurve: Curves.fastOutSlowIn,
-      //           enableInfiniteScroll: true,
-      //           autoPlayAnimationDuration: const Duration(milliseconds: 800),
-      //           viewportFraction: 0.8,
-      //         ),
-      //     ),
-      //   ],
-      // ),
+      
+             
+        ImageSlideshow(
+          
+          width: double.infinity,
+          height: 220,
+          
+          initialPage: 0,
+          indicatorColor: Colors.green,
+          indicatorBackgroundColor: Colors.white,
+          
+          autoPlayInterval: 3000,
+          isLoop: true,
+          children: <Widget>[
+            Image.asset(
+              'assets/c1.jpg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c3.jpg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c5.jpg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c8.jpg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c9.jpg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c2.jpeg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c4.jpeg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c6.jpeg',
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/c7.jpeg',
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
 
 
 
