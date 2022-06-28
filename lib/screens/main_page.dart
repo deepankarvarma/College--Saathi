@@ -87,7 +87,7 @@ class MainPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 2, 10, 10),
-                height: 150.0,
+                height: 170.0,
                 decoration: BoxDecoration(
                   border: Border.all(width: 1.2, color: Colors.green),
                   borderRadius: BorderRadius.circular(20),
@@ -103,7 +103,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(24, 30, 8, 8),
+                padding: const EdgeInsets.fromLTRB(24, 45, 8, 8),
                 child: Container(
                   width: 80.0,
                   height: 37.0,
@@ -125,7 +125,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.fromLTRB(24, 76, 75, 0),
+                padding: const EdgeInsets.fromLTRB(24, 96, 75, 0),
                 child: const TextField(
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
@@ -147,7 +147,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(330, 77, 20, 0),
+                padding: const EdgeInsets.fromLTRB(330, 96, 20, 0),
                 child: FloatingActionButton(
                   
                   onPressed: () {  },
