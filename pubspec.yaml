@@ -63,6 +63,9 @@ flutter:
     - assets/login_bottom.png
     - assets/main_bottom.png
     - assets/main_top.png
+    - assets/signup_top.png
+    - assets/man.jpg
+    - assets/texture.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

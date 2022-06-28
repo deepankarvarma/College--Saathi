@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:college_saathi/screens/imp_contact.dart';
+import 'package:college_saathi/screens/my_profile.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -29,10 +31,10 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 20.0,
           ),
-          const Text(
+           Text(
             'Campus Saathi',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 30, fontFamily: 'Brand-Bold'),
+            style: TextStyle(fontSize: 30, fontFamily: 'Brand-Bold',color: Colors.green[600]),
           ),
           SizedBox(height: 1.0,),
           Text(
@@ -95,7 +97,7 @@ class LoginPage extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
