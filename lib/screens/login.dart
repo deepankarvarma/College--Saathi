@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:college_saathi/screens/imp_contact.dart';
+import 'package:college_saathi/screens/main_page.dart';
 import 'package:college_saathi/screens/my_profile.dart';
 
 import 'package:flutter/material.dart';
@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => MainPage()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
@@ -118,7 +118,7 @@ class LoginPage extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Imp_Contact()));},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),

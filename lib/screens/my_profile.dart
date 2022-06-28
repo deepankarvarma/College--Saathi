@@ -1,5 +1,5 @@
 import 'package:college_saathi/screens/imp_contact.dart';
-import 'package:college_saathi/screens/login.dart';
+import 'package:college_saathi/screens/main_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -21,7 +21,7 @@ class My_Profile extends StatelessWidget {
             icon: const Icon(Icons.logout),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()));
+                  MaterialPageRoute(builder: (context) => const MainPage()));
             },
           ),
           // add more IconButton
@@ -46,18 +46,26 @@ class My_Profile extends StatelessWidget {
           buildProfileImage(),
           Column(
           
-            children: const <Widget>[
+            children: <Widget>[
               
-               SizedBox(
+               const SizedBox(
                 height: 160.0,
               ),
-               Center(
+               const Center(
                  child: Text(
                    'Lorem Ipsum',
                   style: TextStyle(fontSize: 24, fontFamily: 'Brand-Bold',color: Colors.green),
           ),
+          
                ),
-              SizedBox(height: 10.0,),
+               Divider(
+              color: Colors.green[200],
+              height: 20,
+               thickness: 2,
+               indent: 10,
+                endIndent: 10,
+        ),
+               const SizedBox(height: 10.0,),
 
               
             ],

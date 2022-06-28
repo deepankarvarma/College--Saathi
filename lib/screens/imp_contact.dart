@@ -269,7 +269,7 @@ class Imp_Contact extends StatelessWidget {
            ),
       
       
-      
+          
             Padding(
              padding:const EdgeInsets.fromLTRB(6, 0, 6, 6),
              child: Card( 
