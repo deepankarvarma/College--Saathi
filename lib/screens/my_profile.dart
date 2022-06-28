@@ -187,7 +187,7 @@ class My_Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-              SizedBox(height: 34.0,),
+              const SizedBox(height: 34.0,),
                 Center(
             child: SizedBox(
                   height: 40.0,
@@ -195,7 +195,7 @@ class My_Profile extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const My_Profile()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
@@ -208,7 +208,7 @@ class My_Profile extends StatelessWidget {
                    ),
                  ),
           ),
-          SizedBox(height:15.0,),
+          const SizedBox(height:15.0,),
           Center(
             child: SizedBox(
                   height: 40.0,
@@ -216,7 +216,7 @@ class My_Profile extends StatelessWidget {
                 
                    child: FloatingActionButton(
                     
-                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Imp_Contact()));},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
