@@ -2,12 +2,21 @@
 
 import 'package:college_saathi/screens/main_page.dart';
 import 'package:college_saathi/screens/my_profile.dart';
+import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+import 'imp_contact.dart';
+
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _isHidden = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,6 +24,7 @@ class LoginPage extends StatelessWidget {
       
       body: Column(
         children: <Widget>[
+          
           Container(
             height: 150.0,
             alignment: Alignment.topLeft,
@@ -46,57 +56,85 @@ class LoginPage extends StatelessWidget {
            Padding(
             padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
+              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                 filled: true,
+                      fillColor: Color.fromARGB(255, 216, 239, 216),
                   labelText: 'Phone Number',
                   labelStyle: TextStyle(
+                    color: Colors.green,
                     fontFamily: 'Brand-Regular',
                     fontSize: 18.0,
                   ),
+                   hintText: 'Enter your mobile number',
                   hintStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 10.0,
+                    fontFamily: 'Brand-Regular',
+                    fontSize: 16.5,
                   )),
             ),
           ),
             Padding(
             padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
+              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
+              obscureText: _isHidden,
               keyboardType: TextInputType.visiblePassword,
               decoration: InputDecoration(
+                
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderSide: BorderSide(width: 2,color: Colors.green),
+                ),
+                      filled: true,
+                      fillColor: Color.fromARGB(255, 216, 239, 216),
+                      
                   labelText: 'Password',
                   labelStyle: TextStyle(
+                    color: Colors.green,
                     fontFamily: 'Brand-Regular',
                     fontSize: 18.0,
                   ),
+                   hintText: 'Enter a Password',
+                  suffix: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 3, 0),
+                    child: InkWell(
+                      onTap: _togglePasswordView,
+                      child: Icon(Icons.visibility,color: Colors.grey,size: 20,),
+                ),
+                  ),
                   hintStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 10.0,
+                    fontFamily: 'Brand-Regular',
+                    fontSize: 16.0,
                   )),
             ),
           ),
           SizedBox(height: 10.0,),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Forgot Password ?',
-                
-                textAlign: TextAlign.left,
-                
-                style: TextStyle(fontSize: 13.0,fontFamily: 'Brand-Bold',color: Colors.green),
-              ),
-            ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20,0, 8, 0),
+            alignment: Alignment.centerLeft,
+            child: RichText(text: TextSpan(
+              children:  <TextSpan>[
+                  TextSpan(
+                  text: 'Forgot Password ?',
+                   style: TextStyle(fontSize: 13.0,fontFamily: 'Brand-Bold',color: Colors.green),
+                  recognizer:  TapGestureRecognizer()..onTap = () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
+                ),
+              ],
+            ),),
           ),
-          SizedBox(height: 40.0,),
+          
+          SizedBox(height: 36.1,),
           Center(
             child: SizedBox(
                   height: 40.0,
                   width: 350.0,
                 
                    child: FloatingActionButton(
-                    
+                     heroTag: "btn1",
                    onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => MainPage()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
@@ -117,7 +155,7 @@ class LoginPage extends StatelessWidget {
                   width: 350.0,
                 
                    child: FloatingActionButton(
-                    
+                     heroTag: "btn2",
                    onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
@@ -139,5 +177,11 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _togglePasswordView() {
+    setState(() {
+      _isHidden = !_isHidden;
+    });
   }
 }

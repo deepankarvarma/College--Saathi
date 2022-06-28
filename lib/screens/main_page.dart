@@ -127,6 +127,7 @@ class MainPage extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 96, 75, 0),
                 child: const TextField(
+                  style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -149,7 +150,8 @@ class MainPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(330, 96, 20, 0),
                 child: FloatingActionButton(
-                  
+                   heroTag: "btn1",
+
                   onPressed: () {  },
                   backgroundColor: Colors.green,
                   child:  const Icon(Icons.arrow_forward),
@@ -233,6 +235,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 125.0,
             child: FloatingActionButton(
+               heroTag: "btn2",
               onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
@@ -250,6 +253,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 125.0,
             child: FloatingActionButton(
+               heroTag: "btn3",
               onPressed: () {},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
@@ -268,6 +272,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 120.0,
             child: FloatingActionButton(
+               heroTag: "btn4",
               onPressed: () {},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
@@ -292,6 +297,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 125.0,
             child: FloatingActionButton(
+              heroTag: "btn5",
               onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
@@ -309,6 +315,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 125.0,
             child: FloatingActionButton(
+               heroTag: "btn6",
               onPressed: () {},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
@@ -327,6 +334,7 @@ class MainPage extends StatelessWidget {
             height: 80.0,
             width: 120.0,
             child: FloatingActionButton(
+               heroTag: "btn7",
               onPressed: () {},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
