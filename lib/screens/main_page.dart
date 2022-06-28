@@ -162,55 +162,59 @@ class MainPage extends StatelessWidget {
           
       
              
-        ImageSlideshow(
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
           
-          width: double.infinity,
-          height: 220,
-          
-          initialPage: 0,
-          indicatorColor: Colors.green,
-          indicatorBackgroundColor: Colors.white,
-          
-          autoPlayInterval: 3000,
-          isLoop: true,
-          children: <Widget>[
-            Image.asset(
-              'assets/c1.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c3.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c5.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c8.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c9.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c2.jpeg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c4.jpeg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c6.jpeg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/c7.jpeg',
-              fit: BoxFit.cover,
-            ),
-          ],
+          child: ImageSlideshow(
+            
+            width: 370,
+            height: 220,
+            
+            initialPage: 0,
+            indicatorColor: Colors.green,
+            indicatorBackgroundColor: Colors.white,
+            
+            autoPlayInterval: 3000,
+            isLoop: true,
+            children: <Widget>[
+              Image.asset(
+                'assets/c1.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c3.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c5.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c8.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c9.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c2.jpeg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c4.jpeg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c6.jpeg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/c7.jpeg',
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
         ),
 
 
