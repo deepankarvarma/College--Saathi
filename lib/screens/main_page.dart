@@ -34,7 +34,7 @@ class MainPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(9, 9, 9, 3),
+            padding: const EdgeInsets.fromLTRB(9, 12, 9, 3),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(2, 0, 2, 0),
               child: Row(
@@ -160,8 +160,11 @@ class MainPage extends StatelessWidget {
             ],
           ),
           
-      
-             
+        const Text('Campus Gallery',
+        textAlign: TextAlign.start,
+        style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 15.0,color: Colors.green),
+        ),
+        const SizedBox(height: 2.0,),   
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           
@@ -339,7 +342,13 @@ class MainPage extends StatelessWidget {
       ],
       ),
           ),
+        const Text('Version 1.0.2',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontFamily: 'Brand-Regular',fontSize: 12.0,color: Colors.grey),),
 
+         const Text('Made by Aditya, Deepankar & Sarisha',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontFamily: 'Brand-Regular',fontSize: 13.0,color: Colors.grey),),
         ],
       ),
     );
