@@ -10,11 +10,15 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      
       body: Column(
         children: <Widget>[
-          
+          Container(
+            height: 150.0,
+            alignment: Alignment.topLeft,
+            child: Image.asset('assets/main_top.png',)),
           const SizedBox(
-            height: 130.0,
+            height: 00.0,
           ),
           const Image(
             alignment: Alignment.center,
@@ -36,7 +40,7 @@ class LoginPage extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20,fontFamily: 'Brand-Regular',color: Colors.green),
           ),
-          SizedBox(height: 30.0,),
+          SizedBox(height: 10.0,),
            Padding(
             padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
@@ -125,6 +129,11 @@ class LoginPage extends StatelessWidget {
                    ),
                  ),
           ),
+          SizedBox(height: 30.0,),
+          Container(
+            height: 96.0,
+            alignment: Alignment.bottomRight,
+            child: Image.asset('assets/login_bottom.png')),
         ],
       ),
     );
