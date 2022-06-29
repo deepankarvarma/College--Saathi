@@ -10,15 +10,15 @@ class Booking extends StatefulWidget {
 }
 
 class _BookingState extends State<Booking> {
-    String radioButtonItem = 'ONE';
-  int id = 1;  
+  String radioButtonItem = 'ONE';
+  int id = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Container(
-           alignment: Alignment.center,
+          alignment: Alignment.center,
           child: const Text(
             'Book a Rickshaw',
             style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 25.0),
@@ -28,14 +28,15 @@ class _BookingState extends State<Booking> {
           IconButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) =>  const LoginPage()));
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
             },
             icon: const Icon(Icons.logout),
           ),
         ],
       ),
-      body: Column(children: <Widget>[
-        Padding(
+      body: Column(
+        children: <Widget>[
+          Padding(
             padding: const EdgeInsets.fromLTRB(9, 12, 9, 3),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(2, 0, 2, 0),
@@ -85,7 +86,7 @@ class _BookingState extends State<Booking> {
             indent: 10,
             endIndent: 10,
           ),
-        Stack(
+          Stack(
             children: <Widget>[
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 5, 10, 10),
@@ -129,7 +130,8 @@ class _BookingState extends State<Booking> {
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 76, 75, 0),
                 child: const TextField(
-                  style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
+                  style: TextStyle(
+                      color: Colors.green, fontFamily: 'Brand-Regular'),
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -152,18 +154,14 @@ class _BookingState extends State<Booking> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(330, 76, 20, 0),
                 child: FloatingActionButton(
-                   heroTag: "btn1",
-
-                  onPressed: () {  },
+                  heroTag: "btn1",
+                  onPressed: () {},
                   backgroundColor: Colors.green,
-                  child:  const Icon(Icons.location_searching_rounded),
-                  ),
+                  child: const Icon(Icons.location_searching_rounded),
+                ),
               ),
-              
-
             ],
           ),
-          
           Stack(
             children: <Widget>[
               Container(
@@ -208,7 +206,8 @@ class _BookingState extends State<Booking> {
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 76, 25, 0),
                 child: const TextField(
-                  style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
+                  style: TextStyle(
+                      color: Colors.green, fontFamily: 'Brand-Regular'),
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -228,75 +227,159 @@ class _BookingState extends State<Booking> {
                       )),
                 ),
               ),
-              
-              
-
             ],
           ),
-
-
-
           Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Radio(
-              value: 1,
-              groupValue: id,
-              onChanged: (val) {
-                setState(() {
-                  radioButtonItem = 'Shared';
-                  id = 1;
-                });
-              },
-            ),
-            const Text(
-              'Shared',
-              style:  TextStyle(
-                fontSize: 18.50,fontFamily: 'Brand-Bold',color: Colors.green,),
-            ),
- 
-            Radio(
-              value: 2,
-              groupValue: id,
-              onChanged: (val) {
-                setState(() {
-                  radioButtonItem = 'Personal';
-                  id = 2;
-                });
-              },
-            ),
-            const Text(
-              'Personal',
-              style:  TextStyle(
-                fontSize: 18.50,fontFamily: 'Brand-Bold',color: Colors.green,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Radio(
+                value: 1,
+                groupValue: id,
+                fillColor: MaterialStateColor.resolveWith(
+                  (states) => Colors.green,
+                ),
+                onChanged: (val) {
+                  setState(() {
+                    radioButtonItem = 'Shared';
+                    id = 1;
+                  });
+                },
+              ),
+              const Text(
+                'Shared',
+                style: TextStyle(
+                  fontSize: 18.50,
+                  fontFamily: 'Brand-Bold',
+                  color: Colors.green,
+                ),
+              ),
+              Radio(
+                value: 2,
+                groupValue: id,
+                fillColor: MaterialStateColor.resolveWith(
+                  (states) => Colors.green,
+                ),
+                onChanged: (val) {
+                  setState(() {
+                    radioButtonItem = 'Personal';
+                    id = 2;
+                  });
+                },
+              ),
+              const Text(
+                'Personal',
+                style: TextStyle(
+                  fontSize: 18.50,
+                  fontFamily: 'Brand-Bold',
+                  color: Colors.green,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 5.0,
+          ),
+          Center(
+            child: SizedBox(
+              height: 40.0,
+              width: 250.0,
+              child: FloatingActionButton(
+                heroTag: "btn1",
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                backgroundColor: Colors.green,
+                child: const Text(
+                  'Book',
+                  style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0),
+                ),
               ),
             ),
-            
-            
-          ],
-        ),
-        const SizedBox(height: 5.0,),
-        Center(
-            child: SizedBox(
-                  height: 40.0,
-                  width: 250.0,
-                
-                   child: FloatingActionButton(
-                     heroTag: "btn1",
-                   onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                      borderRadius:  BorderRadius.circular(5.0),
-                    ),
-                    backgroundColor: Colors.green,
-                    child: const Text(
-                      
-                      'Book',
-                      style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0),
-                    ),
-                   ),
-                 ),
           ),
-      ],),
+          const SizedBox(height: 15.0,),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Container(
+              
+              
+               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              color: Colors.green[200],
+            border: Border.all(color: Colors.green,)
+            ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 9, 0),
+                    child: Container(
+                      height: 30.0,
+                      width: 400.0,
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        'Rider Name ',
+                        style:
+                            TextStyle(fontFamily: 'Brand-Regular', fontSize: 17.0),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                    child: Container(
+                      height: 35.0,
+                      width: 400.0,
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Colors.grey[300],
+                      ),
+                      child: const Text(
+                        ' Harish',
+                        style: TextStyle(
+                            fontFamily: 'Brand-Regular',
+                            fontSize: 20.0,
+                            color: Colors.green),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
+                    child: Container(
+                      height: 30.0,
+                      width: 400.0,
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        'Rider Phone Number',
+                        style:
+                            TextStyle(fontFamily: 'Brand-Regular', fontSize: 17.0),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                    child: Container(
+                      height: 35.0,
+                      width: 400.0,
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Colors.grey[300],
+                      ),
+                      child: const Text(
+                        ' 9283452617',
+                        style: TextStyle(
+                            fontFamily: 'Brand-Regular',
+                            fontSize: 20.0,
+                            color: Colors.green),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
