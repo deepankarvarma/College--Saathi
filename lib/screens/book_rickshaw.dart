@@ -10,8 +10,11 @@ class Booking extends StatefulWidget {
 }
 
 class _BookingState extends State<Booking> {
-  String radioButtonItem = 'ONE';
+  String radioButtonItem = 'Shared';
+  String name = " ";
+  String phone =" ";
   int id = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,7 +158,9 @@ class _BookingState extends State<Booking> {
                 padding: const EdgeInsets.fromLTRB(330, 76, 20, 0),
                 child: FloatingActionButton(
                   heroTag: "btn1",
-                  onPressed: () {},
+                  onPressed: () {
+                    
+                  },
                   backgroundColor: Colors.green,
                   child: const Icon(Icons.location_searching_rounded),
                 ),
@@ -285,7 +290,10 @@ class _BookingState extends State<Booking> {
               width: 250.0,
               child: FloatingActionButton(
                 heroTag: "btn1",
-                onPressed: () {},
+                onPressed: () {setState(() {
+                      name = ' Harish';
+                      phone = ' 9285102845';
+                    });},
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
                 ),
@@ -297,17 +305,18 @@ class _BookingState extends State<Booking> {
               ),
             ),
           ),
-          const SizedBox(height: 15.0,),
+          const SizedBox(
+            height: 15.0,
+          ),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Container(
-              
-              
-               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              color: Colors.green[200],
-            border: Border.all(color: Colors.green,)
-            ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.green[200],
+                  border: Border.all(
+                    color: Colors.green,
+                  )),
               child: Column(
                 children: <Widget>[
                   Padding(
@@ -318,8 +327,8 @@ class _BookingState extends State<Booking> {
                       alignment: Alignment.centerLeft,
                       child: const Text(
                         'Rider Name ',
-                        style:
-                            TextStyle(fontFamily: 'Brand-Regular', fontSize: 17.0),
+                        style: TextStyle(
+                            fontFamily: 'Brand-Regular', fontSize: 17.0),
                       ),
                     ),
                   ),
@@ -333,9 +342,9 @@ class _BookingState extends State<Booking> {
                         borderRadius: BorderRadius.circular(5),
                         color: Colors.grey[300],
                       ),
-                      child: const Text(
-                        ' Harish',
-                        style: TextStyle(
+                      child: Text(
+                        name,
+                        style: const TextStyle(
                             fontFamily: 'Brand-Regular',
                             fontSize: 20.0,
                             color: Colors.green),
@@ -350,8 +359,8 @@ class _BookingState extends State<Booking> {
                       alignment: Alignment.centerLeft,
                       child: const Text(
                         'Rider Phone Number',
-                        style:
-                            TextStyle(fontFamily: 'Brand-Regular', fontSize: 17.0),
+                        style: TextStyle(
+                            fontFamily: 'Brand-Regular', fontSize: 17.0),
                       ),
                     ),
                   ),
@@ -365,9 +374,9 @@ class _BookingState extends State<Booking> {
                         borderRadius: BorderRadius.circular(5),
                         color: Colors.grey[300],
                       ),
-                      child: const Text(
-                        ' 9283452617',
-                        style: TextStyle(
+                      child: Text(
+                        phone,
+                        style: const TextStyle(
                             fontFamily: 'Brand-Regular',
                             fontSize: 20.0,
                             color: Colors.green),
