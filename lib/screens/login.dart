@@ -2,6 +2,7 @@
 
 import 'package:college_saathi/screens/main_page.dart';
 import 'package:college_saathi/screens/my_profile.dart';
+import 'package:college_saathi/screens/register.dart';
 import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
@@ -57,18 +58,18 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: TextField(
               style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular'),
-              keyboardType: TextInputType.phone,
+              keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                  filled: true,
                       fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'Phone Number',
+                  labelText: 'Email Id',
                   labelStyle: TextStyle(
                     color: Colors.green,
                     fontFamily: 'Brand-Regular',
                     fontSize: 18.0,
                   ),
-                   hintText: 'Enter your mobile number',
+                   hintText: 'Enter your email address',
                   hintStyle: TextStyle(
                     color: Colors.grey,
                     fontFamily: 'Brand-Regular',
@@ -156,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                 
                    child: FloatingActionButton(
                      heroTag: "btn2",
-                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => My_Profile()));},
+                   onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Register()));},
                       shape: RoundedRectangleBorder(
                       borderRadius:  BorderRadius.circular(5.0),
                     ),
