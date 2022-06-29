@@ -1,4 +1,5 @@
 import 'package:college_saathi/screens/book_rickshaw.dart';
+import 'package:college_saathi/screens/events.dart';
 import 'package:college_saathi/screens/imp_contact.dart';
 import 'package:college_saathi/screens/my_profile.dart';
 import 'package:college_saathi/screens/v_food.dart';
@@ -257,7 +258,10 @@ class MainPage extends StatelessWidget {
             width: 125.0,
             child: FloatingActionButton(
                heroTag: "btn3",
-              onPressed: () {},
+              onPressed: () { Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Events()));},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
               ),

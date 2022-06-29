@@ -2,17 +2,16 @@ import 'package:college_saathi/screens/main_page.dart';
 import 'package:flutter/material.dart';
 
 import 'imp_contact.dart';
-import 'my_profile.dart';
 
 class Register extends StatefulWidget {
-  Register({Key? key}) : super(key: key);
+  const Register({Key? key}) : super(key: key);
 
   @override
   State<Register> createState() => _RegisterState();
 }
 
 class _RegisterState extends State<Register> {
-  String _phone = "9345173234";
+  String _email = "test123@gmail.com";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +55,7 @@ class _RegisterState extends State<Register> {
               ),
               Center(
                 child: Text(
-                  _phone,
+                  _email,
                   style: const TextStyle(
                       fontSize: 24,
                       fontFamily: 'Brand-Bold',

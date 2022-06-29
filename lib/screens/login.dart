@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:college_saathi/screens/main_page.dart';
-import 'package:college_saathi/screens/my_profile.dart';
 import 'package:college_saathi/screens/register.dart';
 import 'package:flutter/gestures.dart';
 
