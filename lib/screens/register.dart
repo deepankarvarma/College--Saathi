@@ -12,6 +12,8 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   String _email = "test123@gmail.com";
+  final items = ['Admin', 'Student', 'Password'];
+  String? value;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +64,6 @@ class _RegisterState extends State<Register> {
                       color: Colors.green),
                 ),
               ),
-              
               const SizedBox(
                 height: 10.0,
               ),
@@ -70,124 +71,163 @@ class _RegisterState extends State<Register> {
           ),
           Column(
             children: <Widget>[
-              
               const Padding(
-            padding: EdgeInsets.fromLTRB(10, 210, 10, 0),
-            child: TextField(
-              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular',fontSize: 17),
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                // border: OutlineInputBorder(),
-                 filled: true,
+                padding: EdgeInsets.fromLTRB(10, 210, 10, 0),
+                child: TextField(
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontFamily: 'Brand-Regular',
+                      fontSize: 17),
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                      // border: OutlineInputBorder(),
+                      filled: true,
                       fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'Name',
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17.0,
-                  ),
-                   hintText: 'Enter your name',
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17,
-                  )),
-            ),
-          ),
-               const Padding(
-            padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
-            child: TextField(
-              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular',fontSize: 17),
-              keyboardType: TextInputType.streetAddress,
-              decoration: InputDecoration(
-                // border: OutlineInputBorder(),
-                 filled: true,
+                      labelText: 'Name',
+                      labelStyle: TextStyle(
+                        color: Colors.green,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17.0,
+                      ),
+                      hintText: 'Enter your name',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17,
+                      )),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
+                child: TextField(
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontFamily: 'Brand-Regular',
+                      fontSize: 17),
+                  keyboardType: TextInputType.streetAddress,
+                  decoration: InputDecoration(
+                      // border: OutlineInputBorder(),
+                      filled: true,
                       fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'Address',
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17.0,
-                  ),
-                   hintText: 'Enter your current address',
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17,
-                  )),
-            ),
-          ),
-
-            const Padding(
-            padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
-            child: TextField(
-              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular',fontSize: 17),
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                // border: OutlineInputBorder(),
-                 filled: true,
+                      labelText: 'Address',
+                      labelStyle: TextStyle(
+                        color: Colors.green,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17.0,
+                      ),
+                      hintText: 'Enter your current address',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17,
+                      )),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
+                child: TextField(
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontFamily: 'Brand-Regular',
+                      fontSize: 17),
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                      // border: OutlineInputBorder(),
+                      filled: true,
                       fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'Alternate Number',
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17.0,
-                  ),
-                   hintText: 'Enter your alternate number',
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17,
-                  )),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
-            child: TextField(
-              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular',fontSize: 17),
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                // border: OutlineInputBorder(),
-                 filled: true,
+                      labelText: 'Alternate Number',
+                      labelStyle: TextStyle(
+                        color: Colors.green,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17.0,
+                      ),
+                      hintText: 'Enter your alternate number',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17,
+                      )),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
+                child: TextField(
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontFamily: 'Brand-Regular',
+                      fontSize: 17),
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                      // border: OutlineInputBorder(),
+                      filled: true,
                       fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'Enrolment/Id Number',
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17.0,
+                      labelText: 'Enrolment/Id Number',
+                      labelStyle: TextStyle(
+                        color: Colors.green,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17.0,
+                      ),
+                      hintText: 'Enter your enrolment number',
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Brand-Regular',
+                        fontSize: 17,
+                      )),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 12, 10, 0),
+                child: Container(
+                
+                  decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 216, 239, 216),
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(color: Colors.green,width: 1,),
                   ),
-                   hintText: 'Enter your enrolment number',
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17,
-                  )),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
-            child: TextField(
-              style: TextStyle(color: Colors.green,fontFamily: 'Brand-Regular',fontSize: 17),
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                // border: OutlineInputBorder(),
-                 filled: true,
-                      fillColor: Color.fromARGB(255, 216, 239, 216),
-                  labelText: 'User Type',
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17.0,
+                  child: ButtonTheme(
+                    
+                    alignedDropdown: true,
+                    child: DropdownButton<String>(
+                      
+                      hint:const Text('Select a user type',
+                      style: TextStyle(color: Colors.green, fontFamily: 'Brand-Regular', fontSize: 17,),
+                      ),
+                      value: value,
+                      
+                      icon: const Icon(Icons.arrow_drop_down,color: Colors.green,),
+                      isExpanded: true,
+                      items: items.map(buildMenuItem).toList(),
+                      onChanged: (value) => setState(() => this.value = value),           
+                    ),
                   ),
-                   hintText: 'Enter the user type',
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'Brand-Regular',
-                    fontSize: 17,
-                  )),
-            ),
-          ),
-             
+                ),
+              ),
+              // const Padding(
+              //   padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
+              //   child: TextField(
+              //     style: TextStyle(
+              //         color: Colors.green,
+              //         fontFamily: 'Brand-Regular',
+              //         fontSize: 17),
+              //     keyboardType: TextInputType.text,
+              //     decoration: InputDecoration(
+              //         // border: OutlineInputBorder(),
+              //         filled: true,
+              //         fillColor: Color.fromARGB(255, 216, 239, 216),
+              //         labelText: 'User Type',
+              //         labelStyle: TextStyle(
+              //           color: Colors.green,
+              //           fontFamily: 'Brand-Regular',
+              //           fontSize: 17.0,
+              //         ),
+              //         hintText: 'Enter the user type',
+              //         hintStyle: TextStyle(
+              //           color: Colors.grey,
+              //           fontFamily: 'Brand-Regular',
+              //           fontSize: 17,
+              //         )),
+              //   ),
+              // ),
               const SizedBox(
                 height: 25.0,
               ),
@@ -250,6 +290,15 @@ class _RegisterState extends State<Register> {
           backgroundColor: Colors.greenAccent,
           radius: 60,
           backgroundImage: AssetImage('assets/man.jpg'),
+        ),
+      );
+  DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
+        
+        value: item,
+        child: Text(
+          item,
+          style: const TextStyle(
+              color: Colors.green, fontFamily: 'Brand-Regular', fontSize: 18),
         ),
       );
 }
