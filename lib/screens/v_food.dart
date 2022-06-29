@@ -1,7 +1,8 @@
 import 'package:college_saathi/screens/imp_contact.dart';
+import 'package:college_saathi/screens/v_sta.dart';
 import 'package:flutter/material.dart';
-// import 'package:college_saathi/screens/v_gen.dart';
-// import 'package:college_saathi/screens/v_sta.dart';
+import 'package:college_saathi/screens/v_gen.dart';
+import 'package:college_saathi/screens/v_sta.dart';
 
 class Food extends StatelessWidget {
   const Food({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class Food extends StatelessWidget {
                       width: 125.0,
                       child: FloatingActionButton(
                         backgroundColor:Colors.lightGreen,
-                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) =>const Imp_Contact()));},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) =>const Stationary()));},
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         child:const Text(
                           'Stationery',
@@ -61,7 +62,7 @@ class Food extends StatelessWidget {
                       width: 125.0,
                       child:FloatingActionButton(
                         backgroundColor:Colors.lightGreen,
-                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const General()));},
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         child:const Text(
                           'General',
@@ -73,7 +74,6 @@ class Food extends StatelessWidget {
                ],
               ),
 
-          
             Column(
               children:  <Widget>[
                 Padding(
@@ -310,6 +310,42 @@ class Food extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.fromLTRB(6, 8, 6, 4),
                               child: Text(
+                                'Aahar, E-Block',
+                                style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 23.0,color: Colors.green),
+                                ),
+                            ),
+                            const SizedBox(height: 2,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children:const <Widget> [
+                                    Icon(Icons.phone ,color: Colors.green,size: 23.0,),
+                                    SizedBox(width: 2.0,),
+                              Text(
+                                'Contact :',
+                                style: TextStyle(fontFamily: 'Brand-Regular',fontSize: 20.0,color: Colors.green),
+                              ),
+                              Text(
+                                ' 123456789',
+                                style: TextStyle(fontFamily: 'Brand-Regular',fontSize: 20.0,color: Colors.green),
+                              ),
+                            ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ),  Padding(
+                    padding:const EdgeInsets.all(8),
+                    child: Card(
+                      color: Colors.green[100],
+                      child: SizedBox(
+                        height: 75,
+                        width:400,
+                        child:Column(
+                          children: <Widget> [
+                            const Padding(
+                              padding: EdgeInsets.fromLTRB(6, 8, 6, 4),
+                              child: Text(
                                 'Roll Aunty, Jaggi',
                                 style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 23.0,color: Colors.green),
                                 ),
@@ -337,10 +373,9 @@ class Food extends StatelessWidget {
                 ),
               ],
             ),
-
-        ],
+          ],
+        ),
       ),
-                ),
     );
   }
 }
