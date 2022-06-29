@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:college_saathi/screens/r_history.dart';
 class Ride extends StatelessWidget {
   const Ride({Key? key}) : super(key: key);
 
@@ -28,13 +27,18 @@ class Ride extends StatelessWidget {
                       child: Center(
                         child: Card(
 
-                          color:Colors.green[100],
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(20, 15, 15, 20),
-                            child: const Text(
+                          color:Colors.lightGreen,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100),
+                          side: const BorderSide(
+                               width: 2,
+                                           color: Colors.lightGreen
+                                          ),
+                          ),
+                          child: const Padding(
+                            padding:  EdgeInsets.fromLTRB(20, 15, 15, 20),
+                            child: Text(
                               'Fare is 10/- anywhere in campus',
-                              style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0),
+                              style: TextStyle(fontFamily: 'Brand-Bold', fontSize: 18.0,color: Colors.white),
                             ),
                           ),
                         ),

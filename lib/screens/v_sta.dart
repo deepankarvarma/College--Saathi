@@ -1,7 +1,6 @@
 import 'package:college_saathi/screens/v_gen.dart';
 import 'package:flutter/material.dart';
 // import 'package:college_saathi/screens/v_gen.dart';
-import 'package:college_saathi/screens/v_sta.dart';
 import 'package:college_saathi/screens/v_food.dart';
 
 import 'main_page.dart';

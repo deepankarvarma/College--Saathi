@@ -49,7 +49,7 @@ class _FoodState extends State<Food> {
                 children: <Widget>[
                   Expanded(
                     child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         height: 60.0,
                         width: 125.0,
                         child: FloatingActionButton(
