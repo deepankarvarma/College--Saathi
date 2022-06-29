@@ -1,4 +1,6 @@
+import 'package:college_saathi/screens/book_rickshaw.dart';
 import 'package:college_saathi/screens/imp_contact.dart';
+import 'package:college_saathi/screens/v_food.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:college_saathi/screens/login.dart';
 import 'package:flutter/material.dart';
@@ -273,7 +275,7 @@ class MainPage extends StatelessWidget {
             width: 120.0,
             child: FloatingActionButton(
                heroTag: "btn4",
-              onPressed: () {},
+              onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Booking()));},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
               ),
@@ -298,7 +300,7 @@ class MainPage extends StatelessWidget {
             width: 125.0,
             child: FloatingActionButton(
               heroTag: "btn5",
-              onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Imp_Contact()));},
+              onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Food()));},
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
               
               ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "482045969902",
+    "project_id": "college-saathi-5df72",
+    "storage_bucket": "college-saathi-5df72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482045969902:android:e2ce01a11b7183341d7aff",
+        "android_client_info": {
+          "package_name": "com.example.college_saathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482045969902-tcaaak99iecp81jc3vp8sofrba3ut4fm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeE6-Ue-N_EUi4lWrD_-p0JjT69PQWppA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482045969902-tcaaak99iecp81jc3vp8sofrba3ut4fm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
