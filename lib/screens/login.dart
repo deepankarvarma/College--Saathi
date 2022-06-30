@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:college_saathi/screens/auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
@@ -189,15 +188,13 @@ class _LoginPageState extends State<LoginPage> {
                 child: FloatingActionButton(
                   heroTag: "btn1",
                   onPressed: () async {
-                    // dynamic result = await _auth.signInAnon();
-                    // if (result == null) {
-                    //   print('error signing in ');
-                    // } else {
-                    //   if (kDebugMode) {
-                    //     print('signed in');
-                    //   }
-                    //   print(result);
-                    // }
+                    if (_formKey.currentState!.validate()) {
+                       dynamic result =
+                          await _auth.signInwithemailpass(email, password);
+                          if(result==null){
+                            setState(() => error=' Problem with credentials');
+                          } 
+                    }
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
@@ -224,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                       dynamic result =
                           await _auth.registerwithemailpass(email, password);
                           if(result==null){
-                            setState(() => error=' Please give a valid email');
+                            setState(() => error=' Email Id invalid or already in use');
                           } 
                     }
                   },
