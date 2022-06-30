@@ -1,4 +1,6 @@
-//Made by Deepankar Varma 102003431 2C017
+//Made by Aditya Singh Rathore 2CO17
+//Deepankar Varma 102003431 2C017
+//Sarisha Aggarwal 102003445 2C017
 import 'package:college_saathi/screens/auth.dart';
 import 'package:college_saathi/screens/user.dart';
 import 'package:college_saathi/screens/wrapper.dart';
