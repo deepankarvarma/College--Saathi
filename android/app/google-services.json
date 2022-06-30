@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "444851730450",
-    "project_id": "college-saathi-adshed",
-    "storage_bucket": "college-saathi-adshed.appspot.com"
+    "project_number": "442304275540",
+    "project_id": "college-saathi-ads",
+    "storage_bucket": "college-saathi-ads.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:444851730450:android:87020e9ad35302636080cb",
+        "mobilesdk_app_id": "1:442304275540:android:0cfa26214f8898978879c1",
         "android_client_info": {
           "package_name": "com.example.college_saathi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "444851730450-tkejqu77vce720nc1kuojqb1bn54t9n0.apps.googleusercontent.com",
+          "client_id": "442304275540-khfgfroud7cjfeeeu5oqpkhb5308dohv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBJHIGdLZRhfEqoUmdghKm-v7-sB3mS7wk"
+          "current_key": "AIzaSyDAecgfyMcpxNEkqFjF-QKZ4apWzHcr_Ls"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "444851730450-tkejqu77vce720nc1kuojqb1bn54t9n0.apps.googleusercontent.com",
+              "client_id": "442304275540-khfgfroud7cjfeeeu5oqpkhb5308dohv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

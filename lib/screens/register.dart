@@ -180,7 +180,7 @@ class _RegisterState extends State<Register> {
                 child: Container(
                 
                   decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 216, 239, 216),
+                  color: const Color.fromARGB(255, 216, 239, 216),
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.green,width: 1,),
                   ),
