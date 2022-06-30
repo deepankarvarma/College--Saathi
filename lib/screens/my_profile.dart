@@ -1,11 +1,17 @@
+import 'package:college_saathi/screens/auth.dart';
 import 'package:college_saathi/screens/imp_contact.dart';
-import 'package:college_saathi/screens/main_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class My_Profile extends StatelessWidget {
+class My_Profile extends StatefulWidget {
   const My_Profile({Key? key}) : super(key: key);
 
+  @override
+  State<My_Profile> createState() => _My_ProfileState();
+}
+
+class _My_ProfileState extends State<My_Profile> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,13 +24,11 @@ class My_Profile extends StatelessWidget {
         ),
         actions: [
           IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
             icon: const Icon(Icons.logout),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MainPage()));
-            },
           ),
-          // add more IconButton
         ],
       ),
       body: Stack(
@@ -279,6 +283,7 @@ class My_Profile extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       );
+
   Widget buildProfileImage() => Container(
         alignment: Alignment.topCenter,
         padding: const EdgeInsets.fromLTRB(0, 46, 0, 0),

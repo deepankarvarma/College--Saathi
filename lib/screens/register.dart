@@ -1,4 +1,4 @@
-import 'package:college_saathi/screens/main_page.dart';
+import 'package:college_saathi/screens/auth.dart';
 import 'package:flutter/material.dart';
 
 import 'imp_contact.dart';
@@ -11,6 +11,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final AuthService _auth = AuthService();
   String _email = "test123@gmail.com";
   final items = ['Admin', 'Student', 'Password'];
   String? value;
@@ -26,13 +27,11 @@ class _RegisterState extends State<Register> {
         ),
         actions: [
           IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
             icon: const Icon(Icons.logout),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MainPage()));
-            },
           ),
-          // add more IconButton
         ],
       ),
       body: Stack(

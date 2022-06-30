@@ -1,3 +1,4 @@
+import 'package:college_saathi/screens/auth.dart';
 import 'package:college_saathi/screens/book_rickshaw.dart';
 import 'package:college_saathi/screens/events.dart';
 import 'package:college_saathi/screens/imp_contact.dart';
@@ -6,7 +7,6 @@ import 'package:college_saathi/screens/r_history.dart';
 import 'package:college_saathi/screens/v_food.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:college_saathi/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -18,6 +18,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  final AuthService _auth = AuthService();
   bool shouldPop = true;
   @override
   Widget build(BuildContext context) {
@@ -43,11 +44,10 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+            // IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
             IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
+              onPressed: () async {
+                 await _auth.sign_Out();
               },
               icon: const Icon(Icons.logout),
             ),

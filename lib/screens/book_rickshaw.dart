@@ -1,4 +1,4 @@
-import 'package:college_saathi/screens/login.dart';
+import 'package:college_saathi/screens/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +10,7 @@ class Booking extends StatefulWidget {
 }
 
 class _BookingState extends State<Booking> {
+  final AuthService _auth = AuthService();
   String radioButtonItem = 'Shared';
   String name = " ";
   String phone =" ";
@@ -29,10 +30,9 @@ class _BookingState extends State<Booking> {
         ),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()));
-            },
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
             icon: const Icon(Icons.logout),
           ),
         ],

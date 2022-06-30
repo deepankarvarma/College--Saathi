@@ -1,18 +1,35 @@
+import 'package:college_saathi/screens/auth.dart';
 import 'package:flutter/material.dart';
-class Ride extends StatelessWidget {
+class Ride extends StatefulWidget {
   const Ride({Key? key}) : super(key: key);
 
+  @override
+  State<Ride> createState() => _RideState();
+}
+
+class _RideState extends State<Ride> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
         backgroundColor: Colors.green,
         centerTitle: true,
-          title:const Text(
-          'Ride History',
-          style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 25.0),
+          title:Container(
+            child: const Text(
+            'Ride History',
+            style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 25.0),
         ),
-      ),
+          ),
+        actions: [ 
+          IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
+       ),
       body: SingleChildScrollView(
           padding: const EdgeInsets.all(3),
           child :Column(

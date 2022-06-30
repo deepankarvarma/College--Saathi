@@ -1,3 +1,4 @@
+import 'package:college_saathi/screens/auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:college_saathi/screens/v_sta.dart';
@@ -12,6 +13,7 @@ class General extends StatefulWidget {
 }
 
 class _GeneralState extends State<General> {
+  final AuthService _auth = AuthService();
   bool shouldPop=true;
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,14 @@ class _GeneralState extends State<General> {
             'Vendors',
             style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 25.0),
           ), 
+          actions: [
+          IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
         ),
         body:
           SingleChildScrollView(

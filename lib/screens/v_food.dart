@@ -1,3 +1,4 @@
+import 'package:college_saathi/screens/auth.dart';
 import 'package:college_saathi/screens/main_page.dart';
 import 'package:college_saathi/screens/v_gen.dart';
 import 'package:college_saathi/screens/v_sta.dart';
@@ -12,6 +13,7 @@ class Food extends StatefulWidget {
 }
 
 class _FoodState extends State<Food> {
+  final AuthService _auth = AuthService();
    bool shouldPop=true;  
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,14 @@ class _FoodState extends State<Food> {
                                     builder: (context) => const MainPage()));
             },
           ),
+          actions: [
+          IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
         ),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(3),

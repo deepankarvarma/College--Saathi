@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:college_saathi/screens/auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
@@ -165,7 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                   if (result == null) {
                     print('error signing in ');
                   } else {
-                    print('signed in');
+                    if (kDebugMode) {
+                      print('signed in');
+                    }
                     print(result);
                   }
                 },

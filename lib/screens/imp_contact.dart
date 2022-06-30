@@ -1,10 +1,16 @@
-import 'package:college_saathi/screens/login.dart';
+import 'package:college_saathi/screens/auth.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class Imp_Contact extends StatelessWidget {
+class Imp_Contact extends StatefulWidget {
   const Imp_Contact({Key? key}) : super(key: key);
 
+  @override
+  State<Imp_Contact> createState() => _Imp_ContactState();
+}
+
+class _Imp_ContactState extends State<Imp_Contact> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,10 +23,11 @@ class Imp_Contact extends StatelessWidget {
         ),
         actions: [
           IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
             icon: const Icon(Icons.logout),
-            onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginPage()));},
           ),
-          // add more IconButton
         ],
       ),
      

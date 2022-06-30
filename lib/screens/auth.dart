@@ -1,5 +1,6 @@
 import 'package:college_saathi/screens/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -11,8 +12,9 @@ class AuthService {
 
   //auth change user stream
   Stream<UserAdd?> get user {
-    return _auth.authStateChanges()
-        .map((User? user)  => _userFromFirebaseUser(user!));
+    return _auth
+        .authStateChanges()
+        .map((User? user) => _userFromFirebaseUser(user!));
   }
 
   // sign in anon
@@ -22,7 +24,9 @@ class AuthService {
       User? user = result.user;
       return user;
     } catch (e) {
-      print(e.toString());
+      if (kDebugMode) {
+        print(e.toString());
+      }
       return null;
     }
   }
@@ -32,5 +36,13 @@ class AuthService {
   // register with email and password
 
   // sign out
-
+  // ignore: non_constant_identifier_names
+  Future sign_Out() async {
+    try {
+      return await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 }

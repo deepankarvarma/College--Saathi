@@ -1,7 +1,10 @@
 //Made by Deepankar Varma 102003431 2C017
+import 'package:college_saathi/screens/auth.dart';
+import 'package:college_saathi/screens/user.dart';
 import 'package:college_saathi/screens/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main()async{
 WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +18,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.blue,
-      ),
-      home: const Wrapper(),
+      home: StreamProvider<UserAdd?>.value(
+          catchError: (_, __) => null, 
+          value: AuthService().user,
+          initialData: null,
+          child: MaterialApp(
+            
+            theme: ThemeData(
+              primaryColor: Colors.blue,
+            ),
+            home: const Wrapper(),
+      
+          )),
     );
+
   }
 }

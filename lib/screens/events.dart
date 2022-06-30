@@ -1,17 +1,33 @@
-  import 'package:flutter/material.dart';
-class Events extends StatelessWidget {
+  import 'package:college_saathi/screens/auth.dart';
+import 'package:flutter/material.dart';
+class Events extends StatefulWidget {
   const Events({Key? key}) : super(key: key);
 
+  @override
+  State<Events> createState() => _EventsState();
+}
+
+class _EventsState extends State<Events> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+
         backgroundColor: Colors.green,
         centerTitle: true,
           title:const Text(
           'Event Calendar',
           style: TextStyle(fontFamily: 'Brand-Bold',fontSize: 25.0),
         ),
+        actions: [
+          IconButton(
+             onPressed: () async {
+                 await _auth.sign_Out();
+             },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(12, 12,12, 4),
