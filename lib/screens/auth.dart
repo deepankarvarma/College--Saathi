@@ -34,6 +34,17 @@ class AuthService {
   // sign in with email and password
 
   // register with email and password
+  Future registerwithemailpass(String email, String pass) async {
+    try {
+      UserCredential result = await _auth.createUserWithEmailAndPassword(
+          email: email, password: pass);
+      User? user = result.user;
+      return _userFromFirebaseUser(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 
   // sign out
   // ignore: non_constant_identifier_names
