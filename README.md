@@ -1,4 +1,4 @@
-# college_saathi
+# College_saathi
 
 A new Flutter project.
 
